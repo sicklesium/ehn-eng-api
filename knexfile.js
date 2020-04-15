@@ -35,7 +35,7 @@ module.exports = {
   production: {
     client: 'pg',
     debug: true,
-    connection: DB_URL,
+    connection: process.env.DATABASE_URL,
     migrations: {
       tableName: 'migrations'
     },
