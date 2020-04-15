@@ -33,12 +33,13 @@ module.exports = {
   // },
 
   production: {
-    client: 'postgresql',
-    connection: process.env.DATABASE_URL,
+    client: 'pg',
+    debug: true,
+    connection: DB_URL,
     migrations: {
-      directory: "./data/migrations",
-      tableName: "words",
-    }
+      tableName: 'migrations'
+    },
+    ssl: true
   }
 
 };
