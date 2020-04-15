@@ -6,11 +6,11 @@ module.exports = {
 }
 
 function getAll() {
-    return db('words')
+    return db('words2')
 }
 
 function getById(id) {
-    return db('words')
+    return db('words2')
         .where({ id })
         .first();
 }
