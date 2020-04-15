@@ -33,17 +33,12 @@ module.exports = {
   // },
 
   production: {
-    client: 'sqlite3',
+    client: 'postgresql',
     connection: process.env.DATABASE_URL,
-    pool: {
-      min: 2,
-      max: 10
-    },
     migrations: {
       directory: "./data/migrations",
       tableName: "words",
-    },
-    seeds: { directory: "./data/seeds" },
+    }
   }
 
 };
